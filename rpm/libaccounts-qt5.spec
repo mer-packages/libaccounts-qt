@@ -1,4 +1,3 @@
-%define _name accounts-qt
 Name:           libaccounts-qt5
 Version:        1.6
 Release:        1
@@ -6,7 +5,7 @@ License:        LGPLv2.1
 Summary:        Accounts framework (Qt binding)
 Url:            https://code.google.com/p/accounts-sso.libaccounts-qt
 Group:          System/Libraries
-Source:         %{_name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.bz2
 Patch0:         libaccounts-qt-1.2-disable-multilib.patch
 Patch1:         0001-libaccounts-qt-c++0x.patch
 Patch2:         0002-libaccounts-qt-documentation-path.patch
@@ -46,7 +45,7 @@ Group:          Documentation
 HTML documentation for the accounts.
 
 %prep
-%setup -q -n %{_name}-%{version}
+%setup -q -n %{name}-%{version}/libaccounts-qt
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
