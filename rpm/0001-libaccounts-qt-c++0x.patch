@@ -1,0 +1,16 @@
+diff -Naur a/common-project-config.pri b/common-project-config.pri
+--- a/common-project-config.pri	2013-01-23 07:01:07.000000000 +0100
++++ b/common-project-config.pri	2013-04-16 12:38:08.443130869 +0200
+@@ -20,10 +20,10 @@
+ #QMAKE_CXXFLAGS *= -Werror
+ 
+ greaterThan(QT_MAJOR_VERSION, 4) {
+-    # Qt5: use C++11. This is used to avoid the source incompatibility
++    # Qt5: use C++0x. This is used to avoid the source incompatibility
+     # with the QSKIP macro, as described in:
+     # http://www.kdab.com/porting-from-qt-4-to-qt-5/
+-    QMAKE_CXXFLAGS += -std=c++11
++    QMAKE_CXXFLAGS += -std=c++0x
+ }
+ 
+ #-----------------------------------------------------------------------------

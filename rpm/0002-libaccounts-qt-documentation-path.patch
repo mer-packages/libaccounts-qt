@@ -1,0 +1,16 @@
+diff -Naur a/doc/doc.pri b/doc/doc.pri
+--- a/doc/doc.pri	2013-02-19 11:53:02.000000000 +0100
++++ b/doc/doc.pri	2013-04-16 15:05:46.475540626 +0200
+@@ -59,7 +59,11 @@
+ #-----------------------------------------------------------------------------
+ # Installation target setup for documentation
+ #-----------------------------------------------------------------------------
+-documentation.path = $${INSTALL_PREFIX}/share/doc/$${PROJECT_NAME}
++greaterThan(QT_MAJOR_VERSION, 4) {
++    documentation.path = $${INSTALL_PREFIX}/share/doc/$${PROJECT_NAME}5
++} else {
++    documentation.path = $${INSTALL_PREFIX}/share/doc/$${PROJECT_NAME}
++}
+ for( folder, DOC_FOLDERS ) {
+     documentation.files += $${TOP_BUILD_DIR}/$${folder}
+ }

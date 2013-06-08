@@ -1,0 +1,48 @@
+* Tue Apr 16 2013 Vesa Halttunen <vesa.halttunen@jollamobile.com> - 1.6
+- Update to upstream version 1.6
+
+* Wed Feb 6 2013 Valerio Valerio <valerio.valerio@jollamobile.com> - 1.4
+- Update to upstream version 1.4
+
+* Tue Jan 29 2013 Oleg Girko <ol+mer@infoserver.ru> - 1.2
+- Disable multilib for x86_64 architecture.
+
+* Thu Aug 23 2012 Bernd Wachter <bernd.wachter@jollamobile.com> - 1.2
+- Update to latest upstream version
+- Move to google-code upstream
+
+* Tue May 29 2012 Bernd Wachter <bwachter@lart.info> - 1.1
+- Update to latest upstream version
+
+* Mon Mar 28 2011 Alberto Mardegan <mardy@users.sourceforge.net> - 0.39
+- Update to latest upstream version
+  + Documentation updates
+
+* Fri Feb 11 2011 Bart Cerneels <bart.cerneels@collabora.co.uk> - 0.38.1
+- Update to lastest upstream version (fixes BMC#13447)
+  + Bugfix: API: Method needed for getting provider icon
+  + Bugfix: Copyright tag not defined in accounts-qt.
+  + Bugfix: Confusing documentation in Accounts::Account.
+
+* Fri Dec 10 2010 Paolo Capriotti <paolo.capriotti@collabora.co.uk> - 0.36
+- Update to latest upstream version (fixes BMC#11162)
+  + Bugfix: don't override distribution's compiler flags 
+  + Enable RTTI support.
+- Remove patch for QMAKE_CXXFLAGS
+
+* Wed Sep 15 2010 Fathi Boudra <fathi.boudra@nokia.com> - 0.34
+- Update to 0.34 (BMC#7258)
+- Add a fix for the overwritten QMAKE_CXXFLAGS
+- Clean up packaging
+
+* Wed Aug 11 2010 Kaitlin Rupert <kaitlin.rupert@intel.com> - 0.31
+- mkspec files now install to /usr/share due to Qt beta2 update
+
+* Mon Aug 02 2010 Bernd Wachter <ext-bernd.wachter@nokia.com> - 0.31
+- Update to latest upstream version
+
+* Mon Jun 14 2010 Bernd Wachter <ext-bernd.wachter@nokia.com> - 0.28
+- Update to latest version
+
+* Wed Apr 21 2010 Bernd Wachter <bwachter@lart.info> - 0.24+0m6-1
+- First RPM version
