@@ -1,0 +1,26 @@
+From 84a6a18b7b7d81071a7bcdb71db3a0bca1093456 Mon Sep 17 00:00:00 2001
+From: Chris Adams <chris.adams@jollamobile.com>
+Date: Wed, 2 Oct 2013 14:17:37 +1000
+Subject: [PATCH] Fix test service MyService to include messaging tag
+
+The unit test assumes that the service has that tag set, but the
+test service had not been updated.  This commit fixes the service.
+---
+ tests/MyService.service |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tests/MyService.service b/tests/MyService.service
+index 7ff6ba2..075a80b 100644
+--- a/tests/MyService.service
++++ b/tests/MyService.service
+@@ -8,6 +8,7 @@
+   <tags>
+     <tag>email</tag>
+     <tag>e-mail</tag>
++    <tag>messaging</tag>
+   </tags>
+ 
+   <!-- default settings (account settings have precedence over these) -->
+-- 
+1.7.10.4
+
