@@ -9,6 +9,7 @@ Source:         %{name}-%{version}.tar.bz2
 Patch0:         libaccounts-qt-1.2-disable-multilib.patch
 Patch1:         0001-libaccounts-qt-c++0x.patch
 Patch2:         0002-libaccounts-qt-documentation-path.patch 
+Patch3:         0003-Fix-test-service-MyService-to-include-messaging-tag.patch
 BuildRequires:  doxygen
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig(QtCore)
