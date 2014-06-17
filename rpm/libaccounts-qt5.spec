@@ -50,6 +50,7 @@ HTML documentation for the accounts.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 sed -i 's,DATA_PATH = .*,DATA_PATH = /opt/tests/%{name}/data,' tests/accountstest.pro
 sed -i 's,/usr/bin/accountstest,/opt/tests/%{name}/accountstest,' tests/tests.xml
 
