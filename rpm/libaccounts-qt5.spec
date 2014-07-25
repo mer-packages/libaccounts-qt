@@ -10,6 +10,7 @@ Patch0:         libaccounts-qt-1.2-disable-multilib.patch
 Patch1:         0001-libaccounts-qt-c++0x.patch
 Patch2:         0002-libaccounts-qt-documentation-path.patch
 Patch3:         0003-Fix-test-service-MyService-to-include-messaging-tag.patch
+Patch4:         0004-Fix-memory-leaks.patch
 BuildRequires:  doxygen
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig(Qt5Core)
@@ -51,6 +52,7 @@ HTML documentation for the accounts.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 sed -i 's,DATA_PATH = .*,DATA_PATH = /opt/tests/%{name}/data,' tests/accountstest.pro
 sed -i 's,/usr/bin/accountstest,/opt/tests/%{name}/accountstest,' tests/tests.xml
 

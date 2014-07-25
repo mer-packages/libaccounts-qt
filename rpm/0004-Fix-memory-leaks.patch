@@ -1,0 +1,25 @@
+diff --git a/Accounts/account-service.cpp b/Accounts/account-service.cpp
+index 7317771..9b3a0cc 100644
+--- a/Accounts/account-service.cpp
++++ b/Accounts/account-service.cpp
+@@ -492,5 +492,7 @@ AuthData AccountService::authData() const
+ 
+     AgAuthData *agAuthData =
+         ag_account_service_get_auth_data(d->m_accountService);
+-    return AuthData(agAuthData);
++    AuthData authData(agAuthData);
++    ag_auth_data_unref(agAuthData);
++    return authData;
+ }
+diff --git a/Accounts/auth-data.cpp b/Accounts/auth-data.cpp
+index ef4b8d9..ed30396 100644
+--- a/Accounts/auth-data.cpp
++++ b/Accounts/auth-data.cpp
+@@ -109,6 +109,7 @@ QVariantMap AuthData::parameters() const
+     if (glibParameters == 0) return QVariantMap();
+ 
+     QVariant variant = gVariantToQVariant(glibParameters);
++    g_variant_unref(glibParameters);
+     if (!variant.isValid()) return QVariantMap();
+ 
+     return variant.toMap();
