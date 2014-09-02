@@ -23,3 +23,23 @@ index ef4b8d9..ed30396 100644
      if (!variant.isValid()) return QVariantMap();
  
      return variant.toMap();
+diff --git a/Accounts/utils.cpp b/Accounts/utils.cpp
+index 71e24b6..5952e85 100644
+--- a/Accounts/utils.cpp
++++ b/Accounts/utils.cpp
+@@ -32,12 +32,14 @@ static QVariantMap gVariantToQVariantMap(GVariant *variant)
+ {
+     QVariantMap ret;
+     GVariantIter iter;
+-    const gchar *key;
++    gchar *key;
+     GVariant *value;
+ 
+     g_variant_iter_init (&iter, variant);
+     while (g_variant_iter_next (&iter, "{sv}", &key, &value)) {
+         ret.insert(UTF8(key), gVariantToQVariant(value));
++        g_variant_unref (value);
++        g_free (key);
+     }
+ 
+     return ret;
