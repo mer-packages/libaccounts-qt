@@ -21,6 +21,19 @@ index 7ff6ba2..075a80b 100644
    </tags>
  
    <!-- default settings (account settings have precedence over these) -->
+diff --git a/tests/accountstest.cpp b/tests/accountstest.cpp
+index f617600..899b399 100644
+--- a/tests/accountstest.cpp
++++ b/tests/accountstest.cpp
+@@ -202,7 +202,7 @@ void AccountsTest::serviceTestCase()
+     QCOMPARE(service.iconName(), QString("general_myservice"));
+     QCOMPARE(service.trCatalog(), QString("accounts"));
+     QStringList tags;
+-    tags << "email" << "e-mail";
++    tags << "email" << "e-mail" << "messaging";
+     QCOMPARE(service.tags(), tags.toSet());
+     // Called twice, because the second time it returns a cached result
+     QCOMPARE(service.tags(), tags.toSet());
 -- 
 1.7.10.4
 
