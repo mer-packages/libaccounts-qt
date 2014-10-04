@@ -1,5 +1,5 @@
 Name:           libaccounts-qt5
-Version:        1.6+git6
+Version:        1.6+git7
 Release:        1
 License:        LGPLv2.1
 Summary:        Accounts framework (Qt binding)
