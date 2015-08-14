@@ -3,7 +3,7 @@ Version:        1.13
 Release:        1
 License:        LGPLv2.1
 Summary:        Accounts framework (Qt binding)
-Url:            https://code.google.com/p/accounts-sso.libaccounts-qt
+Url:            https://gitlab.com/accounts-sso/libaccounts-qt
 Group:          System/Libraries
 Source:         %{name}-%{version}.tar.bz2
 Patch0:         libaccounts-qt-1.2-disable-multilib.patch
